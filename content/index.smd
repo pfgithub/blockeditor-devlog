@@ -18,7 +18,14 @@
 - get app building on android. it finds every Compile step in the compilation and
   adds the libc file if it its target's abi is android
 - move c++ example triangle to zig on android
-- prepare to begin rendering app on android. sample triangle isn't working yet.
+- get android app rendering!
+- move text cache into beui2 & begin on tabs
+- start to switch EditorView to use generic b2 virtualized scrolling (it doesn't build yet,
+  there's more coding to do)
+
+the android app is rendering!
+
+[screenshot of android emulator showing the text editor with a keyboard]($image.asset('2024-09-30-blockeditor_android_app.png'))
 
 # [2024-09-29]($section.id("2024-09-29"))
 
