@@ -16,6 +16,7 @@
       </p>
       <ul>
         <li>A text editor for programming in, like VSCode</li>
+        <li>A WYSIWYG markdown editor for markdown files and within Zig documentation comments</li>
         <li>An immediate mode GUI framework that handles designing fancy layouts similar to and in some ways better than Tailwind CSS</li>
         <li>Sandboxing, so you can install any editor from any source safely</li>
         <li>Desktop (Mac, Windows, Linux), Mobile (iOS, Android), and web support</li>
