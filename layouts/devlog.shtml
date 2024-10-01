@@ -5,8 +5,21 @@
   <body>
     <div>
       <p>
-        // TODO: explain what your devlog is about
+        Blockeditor will be:
       </p>
+      <ul>
+        <li>A framework for building fast cross-platform collaborative applications with offline capability</li>
+        <li>An app to store all your documents, like Obsidian, Notes, Keep, or Notion and a server for sync</li>
+      </ul>
+      <p>
+        Blockeditor will contain:
+      </p>
+      <ul>
+        <li>A text editor for programming in, like VSCode</li>
+        <li>An immediate mode GUI framework that handles designing fancy layouts similar to and in some ways better than Tailwind CSS</li>
+        <li>Sandboxing, so you can install any editor from any source safely</li>
+        <li>Desktop (Mac, Windows, Linux), Mobile (iOS, Android), and web support</li>
+      </ul>
       <p>
         This page is also available as an
         <a href="/devlog/rss.xml">RSS Feed</a>
