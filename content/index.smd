@@ -11,6 +11,26 @@
 .draft = false,
 ---
 
+# [2024-10-01]($section.id("2024-10-01"))
+
+- finish migration of text editor to virtual scroller
+- add draw list state to beui2. it keeps around data for one frame associated with
+  an id so you can access it again. it also tells you the position you were on screen
+  last frame.
+- remake text selection to be frame-perfect. the first frame we know about the
+  inputs is the one where we visibly show selected text.
+- add initial draggable and resizable windows to beui2. on linux the corner resize
+  cursors don't show which is really confusing.
+- add vscode run configurations to build and launch the app into a debugger or
+  run with tracy.
+- convert all of beui2 to use floats, it gets us better prepared for non integer scaling
+  maybe. or maybe it doesn't and we'll switch it all back to ints.
+- attempt to update tracy, but their new cmake fetches dear imgui from source and
+  applies some patches and that will take some effort to replicate in build.zig. or we
+  could have build.zig run cmake. cmake is self-hosted unfortunately.
+
+[screenshot of a beui2 window. there's no clipping or wrapping yet so the text is escaping its bounds, and the windows are unstyled.]($image.asset('2024-10-01-beui2_window.png'))
+
 # [2024-09-30]($section.id("2024-09-30"))
 
 - disable grapheme cursor on unsupported platforms and fall back to codepoint
