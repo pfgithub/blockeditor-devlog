@@ -11,6 +11,18 @@
 .draft = false,
 ---
 
+# [2024-10-02]($section.id("2024-10-02"))
+
+- switch beui2 wm to provide the window chrome at the cost of no longer being
+  theme independent. we will get it back eventually but for now it's more important
+  to get windows implemented with one standard theme while we figure it out.
+- mock up of potential window designs, see below. render_list doesn't support rounding
+  yet so we'll implement the second one with no rounding for now and add rounding later.
+
+[first mockup of a potential beui2 window design]($image.asset('2024-10-02-mockup_1.png'))
+
+[second mockup of a potential beui2 window design. we'll implement this, but with rounded corners coming later.]($image.asset('2024-10-02-mockup_2.png'))
+
 # [2024-10-01]($section.id("2024-10-01"))
 
 - finish migration of text editor to virtual scroller
