@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body{background-color:white; margin: 0}
+      body > div > div > *, .header > * {max-width:48rem;margin:1rem auto; padding: 0 1rem}
+      ul {padding-left: 2rem !important}
+      img {display: block}
+      figure {display: contents}
+      figure > img {margin: 1rem auto; max-width: 100vw}
+      figure > figcaption {max-width: 48rem; margin: 1rem auto; padding: 0 1rem}
+    </style>
   </head>
   <body>
-    <div>
+    <div class="header">
       <p>
         Blockeditor will be:
       </p>
