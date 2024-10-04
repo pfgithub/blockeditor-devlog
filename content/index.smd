@@ -11,6 +11,20 @@
 .draft = false,
 ---
 
+# [2024-10-03]($section.id("2024-10-03"))
+
+- remove calling alignForward on the result of sizeOf - it's guaranteed to be the same
+- move all wm interaction processing to the beginning of the frame
+- fix editorview selecting when it's not clicked
+- fix tests & android build were failing
+- add a test for rendering the app. it just tests that it doesn't panic, doesn't test interaction.
+- prepare beui2 wm for supporting docking windows to eachother.
+- fix scrolling on the two windows is working again
+- add padding to the editor view
+- add titlebars to the windows
+
+[windows. they don't look great without rounded borders]($image.asset('2024-10-03-windows.png'))
+
 # [2024-10-02]($section.id("2024-10-02"))
 
 - switch beui2 wm to provide the window chrome at the cost of no longer being
