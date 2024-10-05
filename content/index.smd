@@ -11,6 +11,27 @@
 .draft = false,
 ---
 
+# [2024-10-04]($section.id("2024-10-04"))
+
+- add some more profiling points
+- layout is too slow, we need to speed it up. also, we have to transition away
+  from ikeys and towards callbacks, which are probably slow.
+- positionFromLynCol is too slow when there is one large span. we need to limit
+  the maximum size of spans.
+- begin on an fs tree. it needs beui text and buttons still.
+- first attempt at implementing sticky scrolling. i'm not quite sure what is needed
+  to do it, but this attempt didn't work.
+- update sheen_bidi to use addTranslateC again. it works fine when building android,
+  not sure why I switched it before.
+
+plans for the future:
+
+- implement b2.text! have it cache vertices so it can submit just one big vertex array
+  to the render list unless the text changed or glyph image reset.
+- migrate events to callback-based handling unfortunately.
+- support expanding folders in the file tree
+- watch the folders in the file tree to be able to update them on change
+
 # [2024-10-03]($section.id("2024-10-03"))
 
 - remove calling alignForward on the result of sizeOf - it's guaranteed to be the same
