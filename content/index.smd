@@ -11,6 +11,11 @@
 .draft = false,
 ---
 
+# [2024-10-05]($section.id("2024-10-05"))
+
+- begin to make a generic renderLine implementation that caches vertices and
+  will eventually support line wrap.
+
 # [2024-10-04]($section.id("2024-10-04"))
 
 - add some more profiling points
