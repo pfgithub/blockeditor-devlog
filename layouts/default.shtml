@@ -1,0 +1,6 @@
+<extend template="base.shtml">
+<div id="header">
+  <p>
+    <a href="/">Home</a>
+  </p>
+</div>
