@@ -11,6 +11,17 @@
 .draft = false,
 ---
 
+# [2024-10-06]($section.id("2024-10-06"))
+
+- implement the first version of `b2.textLine()`
+- reimplement the file listing tree and make it support opening folders and files.
+  opening a large file freezes the application, probably because it's trying to render
+  a huge amount in a single line?
+- add tracyEmitFrameImage binding but don't use it yet, I'm not sure how to get
+  the image texture being rendered to in order to try to use mapAsync.
+- switch tracy to use cImport in case stuff changes so it will be caught in an update
+- try to update tracy. it builds, but crashes with SIGSEGV
+
 # [2024-10-05]($section.id("2024-10-05"))
 
 - begin to make a generic renderLine implementation that caches vertices and
