@@ -1,0 +1,21 @@
+---
+.title = "Motivations",
+.date = @date("2024-10-07T00:00:00"),
+.author = "pfg",
+.layout = "devlog.shtml",
+.draft = false,
+---
+
+# [Beui]($section.id("Beui"))
+
+## Why do components not know their positions while being rendered
+
+Imagine making the layout with children always knowing where they will be rendered:
+
+[alert box. there is a button 'back' in the bottom left and 'continue' in the bottom right]($image.asset('alert_sample.png'))
+
+This requires rendering two buttons, one at the bottom left and one at the bottom right.
+
+If it is customary for components to render down and to the right, rendering the 'Back' button is easy. We render a button, and then add its height to the window's height. The 'Continue' button is now more tricky - to get its top left corner, we must calculate its size first and then we can render it in the right position. To calculate its size, we must measure the length of the text 'Continue' and then add any padding for the button. If we want the button to be a stylable part of a UI library, then the UI library must provide a function to measure a button given its text and a function to then render the button at a given position. Alternatively, we could require that the library supports rendering a button to the right of a point and to the left of a point. This also has problems.
+
+Instead, to allow there to be a single button function instead of two, we do not tell the button where it will be rendered, and then place its resulting draw commands at the correct place relative to the parent.
