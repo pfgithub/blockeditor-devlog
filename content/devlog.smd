@@ -11,6 +11,17 @@
 .draft = false,
 ---
 
+# [2024-10-07]($section.id("2024-10-07"))
+
+- Add a background rectangle to the windows
+- Anti-aliased rounded rectangles
+  - I'm not sure what the right way to implement them is but this uses the fragment
+    shader and some extra vertex information + fwidth() to determine how far to antialias.
+    It's in the main shader so it adds extra cost to every vertex, not just the rounded ones.
+- More preperation for supporting docking windows in the window manager.
+
+[rounded rectangles and a circle‽]($image.asset('2024-10-07-progress.png'))
+
 # [2024-10-06]($section.id("2024-10-06"))
 
 - implement the first version of `b2.textLine()`
