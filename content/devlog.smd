@@ -11,6 +11,31 @@
 .draft = false,
 ---
 
+# [2024-10-08 through 2024-10-14]($section.id("2024-10-14"))
+
+- update the zig version and use the self-hosted x86 backend when possible for
+  the blockeditor test exe‽ the blockeditor benchmark runs about 3.5x slower using
+  the self-hosted x86 backend in a debug build vs an llvm debug build.
+- update repositionable draw list's 'place' fn to accept an options struct rather than
+  an offset. this is to prepare for in the future having different place flags, like disabling
+  events, applying a matrix transformation, or clipping a child rdl.
+- add an initial replace_whole_file operation to editor core, intended to be used if the file
+  was updated on disk or an autoformatter was executed. it uses diffz. it's not really useful
+  yet because it doesn't keep an older state of the document - the document might have edits
+  which have not been saved to disk yet, but replace_whole_file runs on the latest version of
+  the document. 
+- [notes on ids](https://github.com/pfgithub/blockeditor/commit/a918e44008ac03a3fed25d02bd5b31d0fd9e3d5b).
+  currently, these are pretty expensive. we can make them into linked lists instead of
+  continuous arrays and probably get a performance boost. and lose that by requiring
+  them all to be looked up in hashmaps at every level.
+- begins on the new mouse_event_2 system which handles events between frames rather
+  than using complicated ikeys. it has its own problems (haven't figured out invalidation yet +
+  it's really annoying) but should be better maybe? it doesn't play nice with the old mouse event
+  system (clicks fall through, can have two click focuses at once) but those will be converted to
+  the new system eventually and the old one removed.
+- fix in the file tree if you open folder A and open B inside of it, then close and reopen A. before,
+  B would be closed, but now B stays open.
+
 # [2024-10-07]($section.id("2024-10-07"))
 
 - Add a background rectangle to the windows
