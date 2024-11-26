@@ -4,12 +4,22 @@
 .author = "pfg",
 .layout = "devlog.shtml",
 .alternatives = [{
-	.layout = "devlog.xml", 
+	.layout = "devlog.xml",
+  .name = "devlog rss",
 	// this is the output path of the generated xml file
 	.output = "devlog/rss.xml",
 }],
 .draft = false,
 ---
+
+# [2024-11-25]($section.id("2024-10-25"))
+
+- update blockeditor to use the new split github repos for zig-gamedev. this
+  makes a first build of blockeditor significantly faster because it does not have
+  to fetch a large repo full of unneeded components. also, blockeditor no longer
+  needs to patch zig-gamedev to hack in build.zig support.
+- update zine (this website uses it), the new version puts width and height attributes
+  on images so they don't resize while loading. 
 
 # [2024-10-08 through 2024-10-14]($section.id("2024-10-14"))
 
