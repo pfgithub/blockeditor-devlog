@@ -12,7 +12,27 @@
 .draft = false,
 ---
 
-# [2024-11-25]($section.id("2024-10-25"))
+# [2024-11-29 through 2024-12-13]($section.id("2024-12-13"))
+
+- make the collapse window button work! now you can collapse and uncollapse
+  windows and while they're collapsed, their content won't be rendered or comptued.
+- un-regresses cross-compilation to windows and building to android. well mostly, the
+  android build just displays a blank screen. but it does compile.
+- starting on a web build. it compiles, but there's no runner yet.
+- new build.zig functions for setting up an application with support for desktop, android,
+  and web. this is interesting because web applications are a few files, not just a Compile
+  step, and they can't have a main loop. so something has to be done for the build.
+- adds ci coverage for: succesfully building & testing on linux, succesfully cross-compile
+  building to windows (but not testing), building to web, building to android
+- add a util module in anywhere that has "extra stdlib functions" - functions that are useful
+  in any module
+- tried to auto generate documentation but ci didn't like it.
+- add a bouncy ball! it is added as an "overlay window" that is always in front of all the other
+  windows and has no window chrome.
+
+[there is a red ball. i click and drag it to throw it around the screen. it bounces off the walls.]($video.id("s812x440").controls(true).asset("2024-12-13-bouncy-ball.mp4"))
+
+# [2024-11-25]($section.id("2024-11-25"))
 
 - update blockeditor to use the new split github repos for zig-gamedev. this
   makes a first build of blockeditor significantly faster because it does not have
